@@ -1,0 +1,240 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.header {
+  background: linear-gradient(to right, green, rgb(139, 227, 7));
+  border-radius: 25px;
+  padding: 20px 70px;
+  padding-right: 75px;
+  padding-bottom: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-right: 20px;
+  vertical-align: middle;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.school-info h1 {
+  font-family: OpenSans;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+}
+
+.school-info h2 {
+  font-family: OpenSans;
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-right: 50px;
+  vertical-align: middle;
+}
+
+hr {
+  border: 2px solid white;
+  font-weight: 700;
+  margin: 3px;
+}
+
+.portal-section {
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 2px 30px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 900px;
+  width: 80%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, green, rgb(139, 227, 7));
+  border-radius: 2px;
+}
+
+.qr-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.qr-card {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-sizing: 0 2px 100px rgba(76, 236, 143, 0.5);
+  border-radius: 25px;
+  padding: 40px;
+  text-align: center;
+  border: 2px solid;
+  position: relative;
+  overflow: hidden;
+}
+
+.qr-code {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  border: 3px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.qr1 {
+  width: 180px;
+}
+
+.qr2 {
+  width: 180px;
+}
+
+.login-card .qr-code {
+  border-color: green;
+}
+
+.logout-card .qr-code {
+  border-color: green;
+}
+
+.login-card {
+  border-color: rgb(76, 236, 143);
+}
+
+.logout-card {
+  border-color: rgb(76, 236, 143);
+}
+
+.login-card .qr-label {
+  color: rgb(60, 255, 0);
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Georgia;
+}
+
+.logout-card .qr-label {
+  color: rgb(60, 255, 0);
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Georgia;
+}
+
+.instructions {
+  background: linear-gradient(to right, green, rgb(139, 227, 7));
+  color: white;
+  font-style: italic;
+  border-radius: 15px;
+  padding: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.instructions::before {
+  content: "💡";
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.status-indicator::before {
+  content: "🟢";
+  margin-right: 8px;
+}
+
+.status-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(39, 174, 96, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
